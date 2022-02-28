@@ -1,0 +1,184 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Android';
+    src: url('../fontes/idroid.otf') format('opentype');
+    font-weight: normal;
+}
+
+:root {
+    --cor0: rgba(0, 128, 0, 0.336);
+    --cor1: rgba(0, 128, 0, 0.178);
+
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-destaque: 'Android';
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: var(--cor0);
+    font-family:var(--fonte-padrao);
+}
+
+a.externo::after {
+    content: '\00a0\1f517';
+}
+
+main p {
+    margin: 15px 0px 15px 0px;
+    text-align: justify;
+    text-indent: 30px;
+    line-height: 2em;
+    font-size: 1em;
+}
+
+main a {
+    text-decoration: none;
+    font-weight: bold;
+    color:black;
+}
+
+div.video {
+    background-color: var(--cor1);
+    margin: 0px -20px 30px -20px;
+    padding: 20px;
+    padding-bottom: 56.5%;
+    position: relative;
+}
+
+div.video > iframe {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+header {
+    background-image: linear-gradient(to bottom, var(--cor1), green);
+    min-height: 150px;
+    padding-top: 30px;
+}
+
+header > h1 {
+    font-family:var(--fonte-destaque);
+    color:white;
+    font-weight: normal;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 3em;
+    text-shadow: 2px 2px 0px black;
+    text-align: center;
+}
+
+header > p {
+    color: rgba(7, 5, 5, 0.87);
+    font-family: var(--fonte-padrao);
+    font-size: 1.2em;
+    max-width: 600px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+nav {
+    padding: 10px;
+    margin: 1px;
+    text-shadow: 0px 7px 7px black; 
+}
+
+nav > a {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav > a:hover {
+    background-color: darkgreen;
+    color: greenyellow;
+    border-radius: 10px;
+    transition-duration: .5s ;
+
+}
+
+main {
+    background-color: white;
+    margin: auto;
+    margin-bottom: 10px;
+    padding: 20px;
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.26);
+    min-width: 300px;
+    max-width: 1000px;
+}
+
+main h1 {
+    font-family: var(--fonte-destaque);
+    font-weight: normal;
+    text-indent: 8px;
+}
+
+main h2 {
+    font-family: var(--fonte-destaque);
+    font-weight: normal;
+    text-indent: 8px;
+}
+
+main img {
+    width: 100%;
+    /* se nao fizer isso, a imagem vaza pela margem */
+}
+
+main img.pequena {
+    max-width: 350px;
+    display: block;
+    margin: auto;
+}
+
+aside {
+    background-color: var(--cor1);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px black;
+}
+
+aside > h3 {
+    background-color: rgba(172, 255, 47, 0.219);
+    color: rgb(43, 29, 29);
+    padding: 10px;
+    margin: -10px -10px 0px -10px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+aside > ul {
+    list-style-type: '\2714\00a0\00a0'; 
+    /* nao é compatível com todos os navegadores */
+    list-style-position: inside;
+    columns: 2;
+    padding-bottom: 20px;
+}
+
+aside > li {
+    padding-left: 20px;
+}
+
+footer{
+    background-color: var(--cor0);
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+    font-family: var(--fonte-destaque);
+    padding: 5px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: var(--cor1);
+}
