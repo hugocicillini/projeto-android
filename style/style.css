@@ -137,10 +137,10 @@ div.video {
 
 div.video > iframe {
     position: absolute;
-    top: 5%;
+    top: 10%;
     left: 5%;
     width: 90%;
-    height: 90%;
+    height: 80%;
 }
 
 aside {
