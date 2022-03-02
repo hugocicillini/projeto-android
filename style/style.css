@@ -7,8 +7,10 @@
 }
 
 :root {
-    --cor0: rgba(0, 128, 0, 0.336);
-    --cor1: rgba(0, 128, 0, 0.178);
+    --cor0: #00E353;
+    --cor1: #46B06D;
+    --cor2: #009637;
+    --cor3: #6FE89C;
 
     --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
     --fonte-destaque: 'Android';
@@ -20,46 +22,12 @@
 }
 
 body {
-    background-color: var(--cor0);
+    background-color: var(--cor2);
     font-family:var(--fonte-padrao);
 }
 
-a.externo::after {
-    content: '\00a0\1f517';
-}
-
-main p {
-    margin: 15px 0px 15px 0px;
-    text-align: justify;
-    text-indent: 30px;
-    line-height: 2em;
-    font-size: 1em;
-}
-
-main a {
-    text-decoration: none;
-    font-weight: bold;
-    color:black;
-}
-
-div.video {
-    background-color: var(--cor1);
-    margin: 0px -20px 30px -20px;
-    padding: 20px;
-    padding-bottom: 56.5%;
-    position: relative;
-}
-
-div.video > iframe {
-    position: absolute;
-    top: 5%;
-    left: 5%;
-    width: 90%;
-    height: 90%;
-}
-
 header {
-    background-image: linear-gradient(to bottom, var(--cor1), green);
+    background-image: linear-gradient(to right, var(--cor2), var(--cor1));
     min-height: 150px;
     padding-top: 30px;
 }
@@ -71,12 +39,12 @@ header > h1 {
     margin-top: 30px;
     margin-bottom: 30px;
     font-size: 3em;
-    text-shadow: 2px 2px 0px black;
+    text-shadow: 3px 3px 20px black;
     text-align: center;
 }
 
 header > p {
-    color: rgba(7, 5, 5, 0.87);
+    color: rgba(7, 3, 3, 0.863);
     font-family: var(--fonte-padrao);
     font-size: 1.2em;
     max-width: 600px;
@@ -90,7 +58,7 @@ header > p {
 nav {
     padding: 10px;
     margin: 1px;
-    text-shadow: 0px 7px 7px black; 
+    text-shadow: 3px 3px 20px black; 
 }
 
 nav > a {
@@ -102,10 +70,9 @@ nav > a {
 
 nav > a:hover {
     background-color: darkgreen;
-    color: greenyellow;
-    border-radius: 10px;
+    color: rgba(172, 255, 47, 0.527);
+    border-radius: 5px;
     transition-duration: .5s ;
-
 }
 
 main {
@@ -125,6 +92,24 @@ main h1 {
     text-indent: 8px;
 }
 
+main p {
+    margin: 15px 0px 15px 0px;
+    text-align: justify;
+    text-indent: 30px;
+    line-height: 1.5em;
+    font-size: 1.0em;
+}
+
+main a {
+    text-decoration: none;
+    font-weight: bold;
+    color:black;
+}
+
+a.externo::after {
+    content: '\00a0\1f517';
+}
+
 main h2 {
     font-family: var(--fonte-destaque);
     font-weight: normal;
@@ -142,16 +127,32 @@ main img.pequena {
     margin: auto;
 }
 
+div.video {
+    background-image: linear-gradient(to right, var(--cor2), var(--cor1));
+    margin: 0px -20px 30px -20px;
+    padding: 20px;
+    padding-bottom: 56.5%;
+    position: relative;
+}
+
+div.video > iframe {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
 aside {
-    background-color: var(--cor1);
+    background-color: var(--cor3);
     padding: 10px;
     border-radius: 10px;
-    box-shadow: 3px 3px 8px black;
+    box-shadow: 3px 3px 5px black;
 }
 
 aside > h3 {
-    background-color: rgba(172, 255, 47, 0.219);
-    color: rgb(43, 29, 29);
+    background-color: var(--cor2);
+    color: rgb(0, 0, 0);
     padding: 10px;
     margin: -10px -10px 0px -10px;
     border-radius: 10px 10px 0px 0px;
@@ -170,15 +171,20 @@ aside > li {
 }
 
 footer{
-    background-color: var(--cor0);
-    color: white;
+    background-color: var(--cor2);
+    color: rgba(255, 255, 255, 0.781);
     text-align: center;
     font-size: 0.8em;
     font-family: var(--fonte-destaque);
     padding: 5px;
 }
 
+footer a {
+    color: black;
+}
+
 footer a:hover {
-    text-decoration: underline;
-    color: var(--cor1);
+    color: black;
+    text-decoration: solid;
+    color: var(--cor0);
 }
